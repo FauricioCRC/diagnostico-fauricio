@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="main-header__title">Titulo del Sistema</h1>
+    </header>
+    <main class="main-main">
+        <h2 class="main-main__title">Clientes</h2>
+        <h3 class="main-main__second-title">Nuevo Cliente</h3>
+        <form id="form" class="form">
+            <div class="form__divisors">
+                <label class="form__label" for="user-id">Id:</label>
+                <input name="id" class="form__input form__input--number" type="number" id="user-id" placeholder="Text box">
+            </div>
+
+            <div class="form__divisors">
+                <label class="form__label" for="user-name">Nombre:</label>
+                <input name="nombre" class="form__input form__input--text" type="text" id="user-name" placeholder="Text box">
+            </div>
+
+            <div class="form__divisors">
+                <label class="form__label" for="user-cedula">Cedula:</label>
+                <input name="cedula" class="form__input form__input--number" type="number" id="user-cedula" placeholder="Text box">
+            </div>
+
+            <div class="form__divisors">
+                <label class="form__label" for="user-telefono">Telefono:</label>
+                <input name="telefono" class="form__input form__input--number" type="number" id="user-telefono" placeholder="Text box">
+            </div>
+
+            <div class="form__divisors">
+                <label class="form__label" for="user-direccion">Direccion:</label>
+                <input name="direccion" class="form__input form__input--text" type="text" id="user-direccion" placeholder="Text box">
+            </div>
+
+            <div class="form__divisors">
+                <label class="form__label" for="user-correo">Correo:</label>
+                <input name="correo" class="form__input" type="email" id="user-correo" placeholder="Text box">
+            </div>
+
+            <div class="form__buttons-container">
+                <input class="form__button" type="reset" value="Limpiar">
+                <input class="form__button" id="createButton" type="submit" value="Incluir">
+            </div>
+        </form>
+        <div id="modificar" class="modificar">
+            <form class="form">
+                <div class="form__divisors">
+                    <label class="form__label" for="user-id">Id:</label>
+                    <input name="id" class="form__input form__input--number" type="number" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <label class="form__label" for="user-name">Nombre:</label>
+                    <input name="nombre" class="form__input form__input--text" type="text" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <label class="form__label" for="user-cedula">Cedula:</label>
+                    <input name="cedula" class="form__input form__input--number" type="number" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <label class="form__label" for="user-telefono">Telefono:</label>
+                    <input name="telefono" class="form__input form__input--number" type="number" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <label class="form__label" for="user-direccion">Direccion:</label>
+                    <input name="direccion" class="form__input form__input--text" type="text" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <label class="form__label" for="user-correo">Correo:</label>
+                    <input name="correo" class="form__input" type="email" placeholder="Text box">
+                </div>
+    
+                <div class="form__divisors">
+                    <input class="form__button form__button--2" id="modificar-acceptButton" type="button" value="Aceptar">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <table id="table" class="table">
+            <thead>
+                <tr>
+                    <th class="table__cell table-head-cell">Id</th>
+                    <th class="table__cell table-head-cell">Nombre</th>
+                    <th class="table__cell table-head-cell">Cédula</th>
+                    <th class="table__cell table-head-cell">Teléfono</th>
+                    <th class="table__cell table-head-cell">Dirección</th>
+                    <th class="table__cell table-head-cell">Correo</th>
+                    <th class="table__cell table-head-cell">Edición</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

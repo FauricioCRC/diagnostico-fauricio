@@ -1,0 +1,231 @@
+:root {
+  --bg-color: hsl(0, 0%, 15%);
+  --bg-target-color: hsl(0, 0%, 20%);
+  --text-color: hsl(0, 0%, 90%);
+  --shadow-color: hsla(0, 0%, 100%, 0.5);
+  --primary-color: hsl(17, 69%, 46%);
+}
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-target-color: hsl(0, 0%, 85%);
+    --text-color: hsl(0, 0%, 15%);
+    --shadow-color: hsla(0, 0%, 0%, 0.5);
+  }
+}
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+}
+::-moz-selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+::selection {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5em;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+figure,
+iframe,
+img,
+picture,
+svg,
+video {
+  display: block;
+  width: 100%;
+}
+figure {
+  margin: 0;
+}
+svg {
+  fill: currentColor;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+button,
+form,
+input,
+label,
+select,
+textarea {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+}
+button,
+select {
+  cursor: pointer;
+}
+select {
+  background-color: var(--bg-color);
+}
+textarea {
+  resize: none;
+}
+table,
+td,
+tr {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  border: 1px solid var(--shadow-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+dl,
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+li {
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+
+.main-header {
+  padding: 0.5em 1.5em;
+  overflow: hidden;
+  background-color: var(--bg-target-color);
+}
+.main-header__title {
+  font-size: 1.3rem;
+}
+.main-main {
+  padding: 0 1.5em;
+}
+.main-main__title {
+  font-size: 1.2rem;
+}
+.form__button {
+  width: 1em 0.5em;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: var(--bg-target-color);
+  border-radius: 10px;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.form__button--2{
+  background-color: var(--bg-color);
+}
+.form__divisors {
+  margin: 1em 0;
+}
+.form__label {
+  display: inline-block;
+}
+.form__input {
+  display: inline-block;
+  padding: 0.3em;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  accent-color: var(--primary-color);
+}
+.form__input--number {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.table {
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.table__button{
+  margin: 0;
+}
+.table__cell {
+  border: 1px solid var(--text-color);
+}
+
+.form__buttons-container {
+  margin: 2em 0;
+}
+
+.modificar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  background-color: var(--bg-target-color);
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity .5s, transform .5s;
+}
+.modificar.active{
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 480px) {
+  .form__buttons-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
+  .form__button {
+    margin-right: 2em;
+  }
+  .form__input {
+    margin-left: 0.8em;
+  }
+  .table__button{
+    display: inline;
+    margin: .5em .5em;
+  }
+}
+@media screen and (min-width: 960px) {
+  .table__cell {
+    padding: 0.5em 2em;
+  }
+}
+@media screen and (hover: hover) {
+  .form__button:hover {
+    background-color: var(--primary-color);
+  }
+}
